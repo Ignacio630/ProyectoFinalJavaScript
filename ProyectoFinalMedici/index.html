@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<title>Crear Usuarios Medici</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Agregar y listar usuarios</h1>
+			<form id="formulario-usuario">
+				<div class="inputs-alta">
+					<div class="input-group mb-3 div-uno">
+						<span class="input-group-text span-uno" id="inputGroup-sizing-default">Name</span>
+						<input
+							type="text"
+							name="nombre"
+							id="name"
+							class="form-control input-uno"
+							aria-label="Sizing example input"
+							aria-describedby="inputGroup-sizing-default"
+							placeholder="Ingrese su nombre"
+						/>
+					</div>
+					<div class="input-group mb-3 div-uno">
+						<span class="input-group-text span-uno" id="inputGroup-sizing-default">Last Name</span>
+						<input
+							type="text"
+							name="apellido"
+							id="username"
+							class="form-control input-uno"
+							aria-label="Sizing example input"
+							aria-describedby="inputGroup-sizing-default"
+							placeholder="Ingrese su apellido"
+						/>
+					</div>
+					<div class="input-group mb-3 div-uno">
+						<span class="input-group-text span-uno" id="inputGroup-sizing-default">Email</span>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							class="form-control input-uno"
+							aria-label="Sizing example input"
+							aria-describedby="inputGroup-sizing-default"
+							placeholder="Ingrese su Email"
+						/>
+					</div>
+					<div class="input-group mb-3 div-uno">
+						<span class="input-group-text span-uno" id="inputGroup-sizing-default">Phone</span>
+						<input
+							type="number"
+							name="phone"
+							id="phone"
+							class="form-control input-uno"
+							aria-label="Sizing example input"
+							aria-describedby="inputGroup-sizing-default"
+							placeholder="Ingrese su Telefono"
+						/>
+					</div>
+				</div>
+				<div class="form-buttom">
+					<button type="submit" class="btn btn-primary btn-lg boton-uno" id="boton-create">Crear usuario</button>
+					<button type="button" class="btn btn-primary btn-lg boton-uno" id="boton-delete">Eliminar usuario</button>
+					<button type="button" class="btn btn-primary btn-lg boton-uno" id="boton-load">Cargar usuarios de la API</button>
+				</div>
+			</form>
+			<div id="content_container">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col" class="th-table"><input class="form-check-input" type="checkbox" id="flexCheckDefault"></th>
+							<th scope="col" class="th-table">Name</th>
+							<th scope="col" class="th-table">Last name</th>
+							<th scope="col" class="th-table">Email</th>
+							<th scope="col" class="th-table">Phone</th>
+						</tr>
+					</thead>
+					<tbody id="filas-usuarios"></tbody>
+				</table>
+			</div>
+		</div>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="./js/index.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
